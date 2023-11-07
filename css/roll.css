@@ -1,0 +1,90 @@
+:host(roll-component) {
+	position: absolute;
+	display: block;
+	pointer-events: none;
+}
+
+:host(roll-component) .base,
+:host(roll-component) .roll {
+	cursor: pointer;
+	pointer-events: initial;
+}
+
+:host(roll-component.disabled) .base,
+:host(roll-component.disabled) .roll {
+	cursor: default;
+	pointer-events: none;
+	opacity: 0.1;
+}
+
+:host(roll-component.unrolled) .base,
+:host(roll-component.unrolled) .roll {
+	opacity: 1;
+}
+
+:host(roll-component.column) {
+	height: 100%;
+	flex-direction: column;
+}
+
+:host(roll-component.column) .base {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	border-radius: 0 0 5px 5px;
+	z-index: 50;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+:host(roll-component) .roll {
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	transition: width 0.5s cubic-bezier(0.9, -0.25, 0.5, 1), height 0.5s cubic-bezier(0.9, -0.25, 0.5, 1), opacity 0.25s linear;
+}
+
+:host(roll-component.unrolled) .roll {
+	transition: width 0.5s cubic-bezier(0.5, 0, 0.1, 1.25), height 0.5s cubic-bezier(0.5, 0, 0.1, 1.25), opacity 0.25s linear;
+}
+
+:host(roll-component.column) .roll {
+	box-shadow: 0 0 10px black;
+	height: 11%;
+	width: 100%;
+	border-bottom: 3px dotted black;
+}
+
+:host(roll-component.column.unrolled) .roll {
+	height: 100%;
+}
+
+:host(roll-component.row) {
+	width: 100%;
+}
+
+:host(roll-component.row) .base {
+	position: relative;
+	width: 10%;
+	height: 100%;
+	border-radius: 5px 5px 0 0;
+	z-index: 50;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, .5);
+}
+
+:host(roll-component.row) .roll {
+	box-shadow: 0 0 10px black;
+	width: 11%;
+	height: 100%;
+	border-right: 3px dotted black;
+}
+
+:host(roll-component.row.unrolled) .roll {
+	width: 100%;
+}
+
+:host(roll-component.gameover) .roll {
+	pointer-events: none;
+	opacity: 1;
+}

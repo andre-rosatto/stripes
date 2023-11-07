@@ -1,0 +1,23 @@
+:host(solution-component) {
+	border: 1px solid white;
+	width: 130px;
+	height: 130px;
+	position: relative;
+	overflow: hidden;
+}
+
+:host(solution-component) .roll {
+	position: absolute;
+	display: block;
+	box-shadow: 0 0 10px black;
+}
+
+:host(solution-component) .column {
+	height: 100%;
+	border-bottom: 3px dotted white;
+}
+
+:host(solution-component) .row {
+	width: 100%;
+	border-right: 3px dotted white;
+}

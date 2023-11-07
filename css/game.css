@@ -1,0 +1,60 @@
+@import url('./style.css');
+
+:host(game-component) {
+	background-color: #333;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+:host(game-component) #config {
+	height: 150px;
+	border: 1px solid white;
+	width: 350px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 5px;
+	padding: 5px 0;
+}
+
+:host(game-component) #solution-wrapper {
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border-right: 2px dotted white;
+}
+
+:host(game-component) #solution-wrapper p {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+:host(game-component) #config-form {
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+:host(game-component) #config-form label {
+	flex-direction: column;
+	margin-bottom: 5px;
+}
+
+:host(game-component) #config-form input {
+	margin-left: 5px;
+}
+
+:host(game-component) #rolls-container {
+	position: relative;
+	width: 75%;
+	height: 75%;
+}
